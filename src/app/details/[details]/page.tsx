@@ -1,9 +1,10 @@
 
 "use client"
 
-import { Navigation} from "../../../Component/Navigation"
 import { useHousedData } from "../../../Component/Details";
 import { ImageGrid } from "../../../Component/HousingData"
+import { Footer } from "../../../Component/Footer";
+
 
 
 
@@ -20,14 +21,12 @@ const productpage = ({params}:{
 
   return (
 
-    <>
-  <Navigation />
+    <div className="flex flex-col">
     <div className="flex bg-white w-fit  mx-auto">
     <ImageGrid />
-    <div className=" flex flex-col items-center justify-start  text-right gap-4">
-      <div className="flex  gap-4 text-4xl pt-14">  
-      <h2 >{house?.houseid}</h2>
-        <h2 className="text-blue-700"> {house?.title}</h2>
+    <div className=" flex flex-col items-center justify-start mx-auto text-right gap-4 w-1/3">
+      <div className="flex text-4xl pt-14">  
+        <h2 className="text-blue-700 w-[70%] flex-wrap "> {house?.title}</h2>
       </div>
         <p className="max-w-sm text-center text-xl "> {house?.description}</p>
         <div className="grid grid-cols-2 gap-4">
@@ -37,7 +36,8 @@ const productpage = ({params}:{
         </div>
     </div>
     </div>
-    </>
+    <Footer />
+    </div>
   )
 }
 

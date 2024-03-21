@@ -2,11 +2,10 @@
 import "leaflet/dist/leaflet.css"
 import { Icon } from "leaflet"
 import {useEffect, useState} from 'react'
-// import  { HousingData }  from "../../Component/HousingData"
 import { MyMap } from "../../Component/MyMap"
-import { Navigation } from "../../Component/Navigation"
 import { log } from "console";
 import { useHousedData} from "../../Component/Details"
+import { Footer } from "../../Component/Footer";
 
 
 export type HousingArea = {
@@ -57,16 +56,15 @@ const Sample = () => {
 
   return (
     <>
-    <Navigation />
-    <div className=" flex w-[100%] h-[100%] p-[1rem] mx-auto">
+    <div className=" flex w-[100%] h-[100%] p-[1rem] mx-auto flex-col">
     <div className="flex flex-col w-full h-full">
     <MyMap 
   HousingData={housed} 
-  icon={icon} 
- 
+  icon={icon}  
 />
   
     </div>
+    <Footer />
   </div>
   </>
   )

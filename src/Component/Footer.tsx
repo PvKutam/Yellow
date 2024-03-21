@@ -4,7 +4,6 @@ export function Footer(){
         window.location.href = "mailto:pvk.abbu@gmail.com";
       }
     return(
-
 <div id= 'Footer' className="flex flex-col-reverse border-t-2 border-[#1e1e1e] gap-3 justify-center items-center p-2  md:flex-row md:justify-between scroll-mt-28">
 <span className="text-white">© 2022 Kutam</span>
 <div className="flex items-center justify-center gap-5 ">

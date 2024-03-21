@@ -2,9 +2,7 @@
 import "leaflet/dist/leaflet.css"
 import { Icon } from "leaflet"
 import {useEffect, useState} from 'react'
-// import  { HousingData }  from "../../Component/HousingData"
 import { MyMap } from "../../Component/MyMap"
-import { Navigation } from "../../Component/Navigation"
 import { log } from "console";
 import { useHousedData} from "../../Component/Details"
 
@@ -61,7 +59,6 @@ const Sample = () => {
 
   return (
     <>
-    <Navigation />
     <div className=" w-[100%] md:w-[100%] h-[100%] p-[1rem]">
     <div className="flex flex-col w-full h-full">
     <MyMap 

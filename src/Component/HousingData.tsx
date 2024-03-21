@@ -2,15 +2,16 @@ import { HousingArea } from "../app/Rent/page"
 import Image from "next/image";
 import image1 from "../../public/pexels-m&w-studios-90317.jpg";
 import image2 from "../../public/pexels-pixabay-271624.jpg";
-import image3 from "../../public/pexels-terry-magallanes-2635038.jpg";
-import image4 from "../../public/pexels-vecislavas-popa-1571460.jpg";
-import image5 from "../../public/pexels-curtis-adams-3288104.jpg";
-import image6 from "../../public/pexels-pixabay-237371.jpg";
+import image3 from "../../public/pexels-terry-magallanes-2635038.jpg"
+import iamge4 from "../../public/pexels-vecislavas-popa-1571460.jpg"
+import image5 from "../../public/pexels-pixabay-237371.jpg"
+import image6 from "../../public/pexels-curtis-adams-3288104.jpg"
+
 
 
 
 export const Images =[
-image1,image2,image3,image4,image5,image6
+image1,image2,image3,iamge4,image5,image6
 ]
 
 
