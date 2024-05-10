@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link"
 import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider,SignedIn,UserButton } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,9 +36,7 @@ export default function RootLayout({
         </button>
           <div className="hidden w-full md:block  dark:bg-gray-900 md:w-auto" id="navbar-default">  
       <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  dark:bg-gray-900 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:">
-      <li>
-          <Link href="/Rent" className="block py-2 px-3  rounded  md:hover:bg-transparent  dark:text-white md:dark:hover:text-blue-600 dark:hover:bg-blue-500 dark:hover:text-white md:dark:hover:bg-transparent">Login</Link>
-        </li>
+      
         <li>
           <Link href="/Rent" className="block py-2 px-3  rounded  md:hover:bg-transparent  dark:text-white md:dark:hover:text-blue-600 dark:hover:bg-blue-500 dark:hover:text-white md:dark:hover:bg-transparent">Rent</Link>
         </li>
@@ -49,7 +47,11 @@ export default function RootLayout({
         <li>
           <Link href="/Loan" className="block py-2 px-3  rounded  md:hover:bg-transparent  dark:text-white md:dark:hover:text-blue-600 dark:hover:bg-blue-500 dark:hover:text-white md:dark:hover:bg-transparent">Finance</Link>
         </li>
+        <SignedIn>
+              <UserButton />
+            </SignedIn>
       </ul>
+      
           </div>
         </div>
       </header>
